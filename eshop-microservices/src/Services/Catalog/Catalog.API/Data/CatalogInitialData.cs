@@ -8,14 +8,14 @@ namespace Catalog.API.Data
         {
             var session = store.LightweightSession();
 
-            if (await session.Query<Product>().AnyAsync())
+            if (await session.Query<Product>().AnyAsync(cancellation))
             {
                 return;
             }
 
             // Using Upsert method from Marten library to insert initial data to postgreSql database
             session.Store<Product>(GetPreconfiguredProducts());
-            await session.SaveChangesAsync();
+            await session.SaveChangesAsync(cancellation);
         }
 
         public IEnumerable<Product> GetPreconfiguredProducts()
