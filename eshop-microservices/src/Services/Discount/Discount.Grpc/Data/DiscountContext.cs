@@ -13,10 +13,10 @@ namespace Discount.Grpc.Data
         {
             modelBuilder.Entity<Coupon>().HasData(
                 new Coupon {
-                    Id = 1, ProductName = "IPhone X", Desciption = "IPhone Discount", Amount = 150
+                    Id = 1, ProductName = "IPhone X", Description = "IPhone Discount", Amount = 150
                 },
                 new Coupon {
-                    Id = 2, ProductName = "Samsung 10", Desciption = "Samsung Discount", Amount = 100
+                    Id = 2, ProductName = "Samsung 10", Description = "Samsung Discount", Amount = 100
                 }
             );
         }

@@ -25,7 +25,7 @@ namespace Discount.Grpc.Migrations
                     b.Property<int>("Amount")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Desciption")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -42,14 +42,14 @@ namespace Discount.Grpc.Migrations
                         {
                             Id = 1,
                             Amount = 150,
-                            Desciption = "IPhone Discount",
+                            Description = "IPhone Discount",
                             ProductName = "IPhone X"
                         },
                         new
                         {
                             Id = 2,
                             Amount = 100,
-                            Desciption = "Samsung Discount",
+                            Description = "Samsung Discount",
                             ProductName = "Samsung 10"
                         });
                 });
